@@ -1,0 +1,52 @@
+@@include('modules/head/index.html')
+
+  @@include('modules/top-navigation/index.html')
+  @@include('modules/header-artist/index.html', {  "parallax-class":"parallax-hark", "bg-image":"assets/images/header-hark.jpg", "artist":"H a r k", "genre": "stoner/sludge metal", "country": "United Kingdom"} )
+
+  <article class="container-article container-artist">
+    <div class="container">
+      <div class="row bg-lightblue">
+        <div class="columns small-30">
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/NFa3KnTy1iw" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="content-container">
+          <div class="columns small-30 large-10 large-push-20">
+            <div class="artist-info">
+              <strong>Klinkt als:</strong>
+              <p>Torche, High on Fire, Orange Goblin</p>
+              <p></p>
+              <!-- <strong>Groot Podium</strong>
+              <p>13.00 - 15.00</p> -->
+              <p></p>
+              <ul>
+                <li><a href="https://www.facebook.com/harktheband/">Facebook</a></li>
+                <li><a href="http://www.harkband.com/">Official website</a></li>
+              </ul>
+            </div>
+            <div class="spotify-container">
+              <a href="https://open.spotify.com/artist/2zZem2yh5oHrMafZf9pI3X" class="btn btn-green">Luister naar HARK op Spotify</a>
+              <iframe src="https://embed.spotify.com/?uri=spotify%3Aartist%3A2zZem2yh5oHrMafZf9pI3X" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+            </div>
+          </div>
+          <div class="columns small-30 large-20 large-pull-10">
+            <div class="content">
+              <p>Deze 4 heren uit Wales brengen een loodzware mix van sludge, stoner en metal.
+                Met hun nieuwe langspeler 'Machinations' gaat de band deze zomer op toer door Europa,
+                waar ze natuurlijk gezellig langskomen bij ons in de 'achtertuin'!</p>
+              <p>De band toerde eerder al met Clutch, Red Fang, Kylesa en Prong en stonden eerder al op grote
+                  festivals als Roadburn, Hellfest en Summer Breeze.</p>
+              <p>Komt dat zien!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  @@include('modules/playlist/index.html')
+  @@include('modules/footer/index.html')
+
+@@include('modules/foot/index.html')

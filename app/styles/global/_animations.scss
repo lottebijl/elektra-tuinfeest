@@ -1,0 +1,79 @@
+@keyframes svgTriangleUp {
+    from {height: 25%;}
+    to {height: 100%;}
+}
+@keyframes svgTriangleDown {
+    from {height: 100%;}
+    to {top: 0%;}
+}
+
+
+@keyframes rotateMe {
+  from {transform: rotate(0deg)}
+  to {transform: rotate(360deg)}
+}
+
+@keyframes carouselin {
+  0%  {
+    transform:translate(-20px,0);
+    opacity:0;
+  }
+  100%{
+    transform:translate(0px,0);
+    opacity:1;
+  }
+}
+
+@keyframes carouselout {
+  0%  {
+    transform:translate(0,0);
+    opacity:1;
+  }
+  100%{
+    transform:translate(20px,0);
+    opacity:0;
+  }
+}
+
+
+@keyframes submitMe {
+  0%  {background-image:url('svg/btn_icon_dot.svg');
+       background-position: 20px 55%;}
+  45% {background-image:url('svg/btn_icon_dot.svg');
+       background-position: -50px 55%;}
+  46% {background-image:url('svg/icon_triangle_forward--white.svg');
+       background-position: 105% 55%;}
+  100%{background-image:url('svg/icon_triangle_forward--white.svg');
+       background-position: 87% 55%;}
+}
+@keyframes submitMeOut {
+  0%{background-image:url('svg/icon_triangle_forward--white.svg');
+       background-position: 87% 55%;}
+  45% {background-image:url('svg/icon_triangle_forward--white.svg');
+      background-position: 105% 55%;}
+  46% {background-image:url('svg/btn_icon_dot.svg');
+       background-position: -50px 55%;}
+  100%  {background-image:url('svg/btn_icon_dot.svg');
+       background-position: 20px 55%;}
+}
+
+
+@keyframes carouselArrow {
+  0%   { left: 50%;opacity:1; }
+  49%   { left: 101%;opacity:0; }
+  50%   { left: -10%;opacity:0; }
+  100% { opacity: 50%;opacity:1; }
+}
+@keyframes carouselArrowBack {
+  0%   { left: 50%;opacity:1;}
+  49%   { left: -10%;opacity:0;}
+  50%   { left: 101%;opacity:0;}
+  100% { opacity: 50%;opacity:1;}
+}
+
+@keyframes linkCircleHover {
+  0%   { background-position: 0.75rem 1.05rem;}
+  49%   { background-position: 0.75rem 3rem;}
+  50%   { background-position: 0.75rem -3rem;}
+  100% { background-position: 0.75rem 1.05rem;}
+}

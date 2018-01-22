@@ -1,0 +1,38 @@
+i.icon{
+  display:block;
+  &.icon-menu{
+    @include svgIcon('icon-menu' , $color-white);
+    height:20px;
+    width:20px;
+  }
+  &.icon-elektra{
+    @include svgIcon('icon-elektra' , $color-white);
+    height:78px;
+    width:78px;
+  }
+  &.icon-arrow{
+    @include svgIcon('icon-arrow' , $color-white);
+    height:17px;
+    width:14px;
+  }
+  &.icon-facebook{
+    background-image:url('../assets/images/icon-facebook.png');
+    height:30px;
+    width:30px;
+  }
+  &.icon-snapchat{
+    background-image:url('../assets/images/icon-snapchat.png');
+    height:30px;
+    width:30px;
+  }
+  &.icon-instagram{
+    background-image:url('../assets/images/icon-instagram.png');
+    height:30px;
+    width:30px;
+  }
+  &.icon-mail{
+    background-image:url('../assets/images/icon-mail.png');
+    height:30px;
+    width:30px;
+  }
+}

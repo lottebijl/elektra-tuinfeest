@@ -1,0 +1,114 @@
+.container-article{
+  padding:0px 30px;
+  max-width:1024px;
+  width:100%;
+  margin-top:40px;
+  @include breakpoint(large){
+    margin-top:80px;
+  }
+  &.container-artist{
+    margin:0 auto;
+    margin-top:80px;
+  }
+  figure.guitar{
+    background: url(../assets/svg/guitar-electric.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 300px;
+    height: 750px;
+    transform: rotate(10deg);
+    right: 0;
+    z-index: 2;
+    top: 100px;
+    display:none;
+    @include breakpoint(large){
+      display:block;
+    }
+  }
+  .video-container{
+    margin:30px;
+    border:1px dashed $color-white;
+    padding:10px;
+    iframe{
+      height:150px;
+      width: 100%;
+      @include breakpoint(large){
+        height:380px;
+      }
+    }
+  }
+  .content-container{
+    height:100%;
+    display:block;
+    overflow:hidden;
+    margin-top:50px;
+    margin-bottom:50px;
+    .content{
+      @include breakpoint(large){
+        padding-right:80px;
+      }
+      strong, p, ul li{
+        font-size: 22px;
+        color: #000000;
+        letter-spacing: 0.1px;
+        line-height: 30px;
+      }
+      a{
+        color:$color-green;
+        text-decoration:underline;
+        &:hover{
+          text-decoration:none;
+        }
+      }
+      iframe{
+        width:100%;
+        height:auto;
+        @include breakpoint(large){
+          height:315px;
+        }
+      }
+    }
+    .artist-info{
+      border:1px dashed $color-blue;
+      font-size: 22px;
+      color: #000000;
+      letter-spacing: 0;
+      padding:20px 30px;
+      strong{
+        font-weight:$font-bold;
+      }
+      ul{
+        margin:0px;
+        margin-top:10px;
+        list-style-type:none;
+        a{
+          color:#000;
+        }
+      }
+    }
+    .spotify-container{
+      margin-top:20px;
+      iframe{
+        display:none;
+      }
+      .btn{
+        display:block;
+        width:100%;
+        margin-top:30px;
+        margin-bottom:30px;
+      }
+      @include breakpoint(large){
+        .btn{
+          display:none;
+        }
+        iframe{
+          display:block;
+        }
+      }
+      iframe{
+        width:100%;
+      }
+    }
+  }
+}

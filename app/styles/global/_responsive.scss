@@ -1,0 +1,10 @@
+// breakpoints
+$breakpoint-small:    "only screen and (min-width: 400px)";
+$breakpoint-medium:   "only screen and (min-width: 1024px)";
+$xxlarge:             1800px;
+
+$grid-column-count: 30!default;
+$grid-column-gutter: (
+  small: 5px,
+  medium: 13px,
+) !default;

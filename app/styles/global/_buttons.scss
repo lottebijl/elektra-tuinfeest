@@ -1,0 +1,107 @@
+.btn{
+  display:table-cell;
+  &.btn-green{
+    max-height:50px;
+    line-height:50px;
+    height:50px;
+    padding:0px 15px;
+    text-align:center;
+    text-transform:uppercase;
+    border-radius:2px;
+    font-family:$font-family;
+    font-size: 20px;
+    font-weight:$font-bold;
+    color:#fff;
+    background-color:$color-green;
+  }
+  &.btn-hollow{
+    max-height:50px;
+    line-height:50px;
+    height:50px;
+    padding:0px 15px;
+    text-align:center;
+    border:1px dashed $color-blue;
+    text-transform:uppercase;
+    border-radius:2px;
+    font-family:$font-family;
+    font-size: 20px;
+    font-weight:$font-bold;
+    &:hover{
+      background:$color-blue;
+      border:1px solid $color-blue;
+      color:white;
+    }
+  }
+  &.btn-menu{
+    margin-top: 20px;
+    font-weight: $font-bold;
+    letter-spacing: 0px;
+    font-size: 22px;
+    font-family: $font-amatic;
+    color:$color-white;
+    text-transform:uppercase;
+    .icon{
+      float:right;
+      margin-top:13px;
+      margin-left:5px;
+    }
+    &.close{
+      .icon{
+        height: 13px;
+        margin-top: 12px;
+        @include svgIcon('icon-exit', $color-white);
+      }
+    }
+  }
+  &.btn-more{
+    background-image:url('../assets/svg/btn-arrowmask.svg');
+    height:30px;
+    width:97px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    color:$color-white;
+    font-family: $font-amatic;
+    font-weight: $font-bold;
+    font-size: 26px;
+    letter-spacing: -0.7px;
+    line-height: 23px;
+    padding-left:7px;
+    &:hover{
+      i.icon-arrow{
+        transform: translateX(4px);
+      }
+    }
+    i.icon-arrow{
+      float:right;
+      margin-top: 9px;
+      margin-right: 10px;
+      transform: translateX(0px);
+      transition: all 0.2s;
+    }
+  }
+}
+
+a.link-arrow{
+  font-family: $font-amatic;
+  font-weight:$font-bold;
+  font-size: 25px;
+  border-bottom:1px solid $color-green;
+  color:black;
+  overflow:hidden;
+  display: table;
+  i.icon-arrow{
+    @include svgIcon('icon-arrow', $color-green);
+    width:17px;
+    height:14px;
+    display: inline-block;
+    margin-top: 14px;
+    margin-right: 5px;
+    margin-left:-20px;
+    transition:all 0.3s;
+  }
+  &:hover{
+    i.icon-arrow{
+      margin-left:0px;
+    }
+  }
+}

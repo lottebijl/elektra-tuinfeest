@@ -1,0 +1,22 @@
+body{
+  font-family:$font-family;
+}
+
+a{
+  color:$color-blue;
+}
+
+.header-title{
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 0px;
+  font-family: $font-amatic;
+  font-weight:$font-bold;
+  color: #000000;
+  letter-spacing: 0;
+  min-height:60px;
+  @include breakpoint(large){
+    font-size: 100px;
+    line-height: initial;
+  }
+}

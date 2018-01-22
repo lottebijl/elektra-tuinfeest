@@ -1,0 +1,105 @@
+section.header-artist{
+  height:540px;
+  width:100%;
+  position:relative;
+  z-index:1;
+  margin-top: -85px;
+  padding-top:calc(85px);
+  background-size:cover;
+  .parallax-window {
+    position:absolute;
+    top:0px;
+    left:0px;
+    min-height: 400px;
+    background: transparent;
+    background-size:cover;
+    width:100%;
+    height:100%;
+  }
+  &:before{
+    height:540px;
+    width:100%;
+    background-color:$color-blue;
+    opacity:0.85;
+    display:block;
+    position:absolute;
+    content:' ';
+    left:0px;
+    top:0px;
+    z-index: -1;
+  }
+  .header-container{
+    height: 455px;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    .header-content{
+      margin:0 auto;
+      width:800px;
+      .title{
+        padding: 0px 35px;
+        font-size:90px;
+        line-height:90px;
+        text-align:center;
+        font-weight:$font-bold;
+        font-family: $font-amatic;
+        letter-spacing: 2.83px;
+        color:$color-white;
+        display:block;
+        position:relative;
+        min-height: 170px;
+        display: block;
+        margin-bottom:15px;
+        @include breakpoint(large){
+          margin-bottom:0px;
+          padding: 0px;
+          font-size: 170px;
+          line-height: 150px;
+        }
+        &:before, &:after{
+          content:'';
+          display:block;
+          position:absolute;
+        }
+        &:before{
+          top: 30px;
+          left: 0px;
+          @include svgIcon('icon-gkey--white', $color-white);
+          height:58px;
+          width:30px;
+        }
+        &:after{
+          bottom: 40px;
+          right: 0px;
+          @include svgIcon('icon-musicnote--white', $color-white);
+          height:31px;
+          width:37px;
+        }
+      }
+      .genre, h5{
+        font-family:$font-family;
+        text-align:center;
+        font-weight:$font-bold;
+        font-size: 26px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+        text-transform:uppercase;
+        margin-bottom:0px;
+        @include breakpoint(large){
+          margin-bottom:10px;
+        }
+      }
+      .country{
+        text-align:center;
+        font-size: 18px;
+        color: #FFFFFF;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+}

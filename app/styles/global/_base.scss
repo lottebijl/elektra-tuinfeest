@@ -1,0 +1,14 @@
+.row{
+  max-width:1440px;
+}
+
+.bg-lightblue{
+  background-color:$color-lightblue;
+}
+
+section{
+  padding:0 20px;
+  @include breakpoint(large){
+      padding:0 30px;
+  }
+}
