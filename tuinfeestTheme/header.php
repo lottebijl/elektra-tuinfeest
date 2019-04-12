@@ -23,8 +23,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="columns small-12">
-        	<h1 class="header__logo"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"> Elektra Tuinfeest </a></h1>
-        	<span class="details">17 juni 2017, gratis toegang Stationsweg, Sliedrecht</span>
+        	<h1 class="header__logo"> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"> Elektra Tuinfeest Indoor</a></h1>
+        	<span class="details">15 december 2018, 5 euro entree, Stationsweg, Sliedrecht</span>
       	</div>
 				<div class="columns small-18">
 					<a href="#" class="btn btn-menu">Menu<i class="icon icon-menu"></i></a>

@@ -6,6 +6,10 @@ section.header-artist{
   margin-top: -85px;
   padding-top:calc(85px);
   background-size:cover;
+  @include breakpoint(large){
+    margin-top: -105px;
+    padding-top:calc(105px);
+  }
   .parallax-window {
     position:absolute;
     top:0px;
@@ -19,7 +23,7 @@ section.header-artist{
   &:before{
     height:540px;
     width:100%;
-    background-color:$color-blue;
+    background-color:$color-secondary;
     opacity:0.85;
     display:block;
     position:absolute;

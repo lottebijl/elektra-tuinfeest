@@ -55,7 +55,7 @@
         line-height: 30px;
       }
       a{
-        color:$color-green;
+        color:$color-primary;
         text-decoration:underline;
         &:hover{
           text-decoration:none;
@@ -70,7 +70,7 @@
       }
     }
     .artist-info{
-      border:1px dashed $color-blue;
+      border:1px dashed $color-secondary;
       font-size: 22px;
       color: #000000;
       letter-spacing: 0;
@@ -154,7 +154,7 @@ footer{
           font-weight:$font-bold;
           font-size: 25px;
           line-height: 38px;
-          border-bottom:1px solid $color-green;
+          border-bottom:1px solid $color-primary;
           color:black;
         }
       }
@@ -168,9 +168,9 @@ footer{
     width:auto;
   }
   .upcoming{
-    border-top:1px dashed $color-blue;
-    border-right:1px dashed $color-blue;
-    border-left:1px dashed $color-blue;
+    border-top:1px dashed $color-secondary;
+    border-right:1px dashed $color-secondary;
+    border-left:1px dashed $color-secondary;
     height:345px;
     border-radius:2px;
     padding:0 30px;
@@ -182,7 +182,7 @@ footer{
     &:before{
       content:' ';
       display:block;
-      @include svgIcon('icon-elektra', $color-blue);
+      @include svgIcon('icon-elektra', $color-secondary);
       margin:0 auto;
       width:36px;
       height:36px;
@@ -202,7 +202,7 @@ footer{
         margin-bottom:10px;
         .date{
           border-radius:3px;
-          background:$color-blue;
+          background:$color-secondary;
           color:white;
           font-size: 12px;
           padding:2px 5px;
@@ -259,6 +259,10 @@ section.header-artist{
   margin-top: -85px;
   padding-top:calc(85px);
   background-size:cover;
+  @include breakpoint(large){
+    margin-top: -105px;
+    padding-top:calc(105px);
+  }
   .parallax-window {
     position:absolute;
     top:0px;
@@ -272,7 +276,7 @@ section.header-artist{
   &:before{
     height:540px;
     width:100%;
-    background-color:$color-blue;
+    background-color:$color-secondary;
     opacity:0.85;
     display:block;
     position:absolute;
@@ -366,7 +370,7 @@ section.header-artist{
 }
 
 section.header-home{
-  margin-top: -85px;
+  margin-top: -105px;
   padding-top:calc(85px + 30px);
   background-size:cover;
   height:80vw;
@@ -380,8 +384,11 @@ section.header-home{
   -moz-background-size: auto;
   background-size: auto;
   @include breakpoint(medium){
-    background-image:none!important;
+    padding-top:80px;
   }
+  // @include breakpoint(large){
+  //   background-image:none!important;
+  // }
   .parallax-window {
     position:absolute;
     top:0px;
@@ -415,7 +422,7 @@ section.header-home{
     height:80vw;
     min-height:550px;
     width:100%;
-    background-color:$color-blue;
+    background-image: linear-gradient(0deg,#f1d26a 0%,$color-pink 100%);
     opacity:0.85;
     display:block;
     position:absolute;
@@ -425,9 +432,9 @@ section.header-home{
     z-index: -1;
   }
   .header-content{
-    @include breakpoint(large){
-      margin-top:60px;
-    }
+    // @include breakpoint(large){
+    //   margin-top:60px;
+    // }
     @include breakpoint(xxlarge){
       margin-top:90px;
     }
@@ -455,10 +462,25 @@ section.header-home{
     figure.header-logo{
       margin:0 auto;
       width:100%;
-      max-width:600px;
-      height:220px;
+      // max-width:600px;
+      // height:220px;
+      height: 200px;
+      max-width: 340px;
+      @include breakpoint(medium){
+        height: 250px;
+        max-width: 440px;
+      }
+      // @include breakpoint(large){
+      //   height: 320px;
+      //   max-width: 530px;
+      // }
+      @include breakpoint(xlarge){
+        height: 320px;
+        max-width: 530px;
+      }
       @include breakpoint(xxlarge){
-        max-width:900px;
+        height: 400px;
+        max-width: 730px;
       }
       img{
         object-fit:cover;
@@ -467,11 +489,13 @@ section.header-home{
   }
 }
 section.header-details{
+  margin-top: -50px;
+  position: relative;
+  margin-bottom: 60px;
+  z-index: 9;
   @include breakpoint(large){
-    margin-bottom:30vw;
+    margin-bottom:25vw;
     margin-top: -30vw;
-    z-index: 10;
-    position: relative;
   }
   .content{
     margin:0 40px;
@@ -491,7 +515,7 @@ section.header-details{
     &:before{
       top: -30px;
       left: -40px;
-      @include svgIcon('icon-gkey', $color-blue);
+      @include svgIcon('icon-gkey', $color-secondary);
       height:58px;
       width:30px;
       @include breakpoint(large){
@@ -502,7 +526,7 @@ section.header-details{
     &:after{
       bottom: 70px;
       right: -30px;
-      @include svgIcon('icon-musicnote', $color-blue);
+      @include svgIcon('icon-musicnote', $color-secondary);
       height:31px;
       width:37px;
       @include breakpoint(large){
@@ -518,7 +542,7 @@ section.header-details{
       letter-spacing: 0.43px;
       line-height: 28px;
       text-transform:uppercase;
-      color:$color-blue;
+      color:$color-secondary;
     }
   }
   .btn-elektra{
@@ -531,7 +555,7 @@ section.header-details{
 }
 
 section.highlighted-news{
-  background-color:$color-lightblue;
+  background-color:$color-tertiary;
   width:100%;
   padding-top:30px;
   padding-bottom:30px;
@@ -540,12 +564,12 @@ section.highlighted-news{
     padding:5px;
   }
   .btn-more{
-    background-image:url('../assets/svg/btn-arrowmask--green.svg');
+    background-image:url('../assets/svg/btn-arrowmask--primary.svg');
   }
 }
 
 .news-block{
-  border:1px dashed $color-lightblue;
+  border:1px dashed $color-tertiary;
   border-radius:2px;
   height:310px;
   display:block;
@@ -600,6 +624,31 @@ section.lineup{
   &.lineup--home{
 
   }
+  figure.guitar-chick{
+    display:none;
+    height: 340px;
+    top: -330px;
+    background: url(../assets/images/guitar-chick.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 240px;
+    z-index: 1;
+    transform: rotate(-10deg);
+    right: -60px;
+    @include breakpoint(medium){
+      display:block;
+    }
+    @include breakpoint(large){
+      right: auto;
+      -webkit-transform: rotate(-10deg);
+      transform: rotate(-10deg);
+      height: 810px;
+      width: 570px;
+      top: calc(-780px);
+      left: -120px;
+    }
+  }
   figure.guitar{
     height: 300px;
     top: -500px;
@@ -644,15 +693,17 @@ section.lineup{
       -o-transition: -o-transform 0.5s;
       transition: transform 0.5s;
       position: absolute;
-      top: -15px;
-      left: -40px;
+      // top: -15px;
+      top:0;
+      left:0;
+      // left: -40px;
       width: 100%;
       height: 100%;
       z-index: -2;
       display: block;
       background-size:cover;
       &:before{
-        background-color:$color-blue;
+        background-color:$color-secondary;
         opacity:0.85;
         content:'';
         display:block;
@@ -723,7 +774,7 @@ section.lineup{
 
 section.playlist{
   height:320px;
-  background-color:$color-green;
+  background-color:$color-primary;
   color:$color-white;
   padding-top:30px;
   padding-bottom: 30px;
@@ -808,7 +859,7 @@ section.playlist{
     width: calc(100% - 50px);
     height: 350px;
     padding:20px;
-    border:1px dashed $color-blue;
+    border:1px dashed $color-secondary;
     border-radius:2px;
     background-color:#fff;
     text-align:center;
@@ -837,12 +888,21 @@ section.playlist{
 section.top-navigation{
   position:relative;
   z-index:10;
+  width:100%;
+  height:105px;
   &.dark{
-    background-color:$color-blue;
+    background-color:$color-secondary;
     height: 80px;
     @include breakpoint(large){
       height:111px;
     }
+  }
+  .top-navigation__inner{
+    position: absolute;
+    top:0px;
+    left:0px;
+    padding: 10px 20px;
+    width:100%;
   }
   .btn-menu{
     float:right;
@@ -874,6 +934,13 @@ section.top-navigation{
         width:125px;
       }
     }
+  }
+  .logo {
+    width: 80px;
+    height: auto;
+    float: left;
+    margin-right: 10px;
+    margin-top: 20px;
   }
   // .logo{
   //   width:80px;
@@ -909,7 +976,7 @@ section.top-navigation{
     z-index:10;
     height: 100vh;
     width:100vw;
-    background: $color-green;
+    background: $color-primary;
     top:0px;
     left: 100vw;
     float:right;

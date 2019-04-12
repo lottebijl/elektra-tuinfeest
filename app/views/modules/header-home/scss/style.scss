@@ -8,7 +8,7 @@
 }
 
 section.header-home{
-  margin-top: -85px;
+  margin-top: -105px;
   padding-top:calc(85px + 30px);
   background-size:cover;
   height:80vw;
@@ -22,8 +22,11 @@ section.header-home{
   -moz-background-size: auto;
   background-size: auto;
   @include breakpoint(medium){
-    background-image:none!important;
+    padding-top:80px;
   }
+  // @include breakpoint(large){
+  //   background-image:none!important;
+  // }
   .parallax-window {
     position:absolute;
     top:0px;
@@ -57,7 +60,7 @@ section.header-home{
     height:80vw;
     min-height:550px;
     width:100%;
-    background-color:$color-blue;
+    background-image: linear-gradient(0deg,#f1d26a 0%,$color-pink 100%);
     opacity:0.85;
     display:block;
     position:absolute;
@@ -67,9 +70,9 @@ section.header-home{
     z-index: -1;
   }
   .header-content{
-    @include breakpoint(large){
-      margin-top:60px;
-    }
+    // @include breakpoint(large){
+    //   margin-top:60px;
+    // }
     @include breakpoint(xxlarge){
       margin-top:90px;
     }
@@ -97,10 +100,25 @@ section.header-home{
     figure.header-logo{
       margin:0 auto;
       width:100%;
-      max-width:600px;
-      height:220px;
+      // max-width:600px;
+      // height:220px;
+      height: 200px;
+      max-width: 340px;
+      @include breakpoint(medium){
+        height: 250px;
+        max-width: 440px;
+      }
+      // @include breakpoint(large){
+      //   height: 320px;
+      //   max-width: 530px;
+      // }
+      @include breakpoint(xlarge){
+        height: 320px;
+        max-width: 530px;
+      }
       @include breakpoint(xxlarge){
-        max-width:900px;
+        height: 400px;
+        max-width: 730px;
       }
       img{
         object-fit:cover;
@@ -109,11 +127,13 @@ section.header-home{
   }
 }
 section.header-details{
+  margin-top: -50px;
+  position: relative;
+  margin-bottom: 60px;
+  z-index: 9;
   @include breakpoint(large){
-    margin-bottom:30vw;
+    margin-bottom:25vw;
     margin-top: -30vw;
-    z-index: 10;
-    position: relative;
   }
   .content{
     margin:0 40px;
@@ -133,7 +153,7 @@ section.header-details{
     &:before{
       top: -30px;
       left: -40px;
-      @include svgIcon('icon-gkey', $color-blue);
+      @include svgIcon('icon-gkey', $color-secondary);
       height:58px;
       width:30px;
       @include breakpoint(large){
@@ -144,7 +164,7 @@ section.header-details{
     &:after{
       bottom: 70px;
       right: -30px;
-      @include svgIcon('icon-musicnote', $color-blue);
+      @include svgIcon('icon-musicnote', $color-secondary);
       height:31px;
       width:37px;
       @include breakpoint(large){
@@ -160,7 +180,7 @@ section.header-details{
       letter-spacing: 0.43px;
       line-height: 28px;
       text-transform:uppercase;
-      color:$color-blue;
+      color:$color-secondary;
     }
   }
   .btn-elektra{

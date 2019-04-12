@@ -55,7 +55,7 @@
         line-height: 30px;
       }
       a{
-        color:$color-green;
+        color:$color-primary;
         text-decoration:underline;
         &:hover{
           text-decoration:none;
@@ -70,7 +70,7 @@
       }
     }
     .artist-info{
-      border:1px dashed $color-blue;
+      border:1px dashed $color-secondary;
       font-size: 22px;
       color: #000000;
       letter-spacing: 0;

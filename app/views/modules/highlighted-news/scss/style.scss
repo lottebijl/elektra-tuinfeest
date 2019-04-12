@@ -1,5 +1,5 @@
 section.highlighted-news{
-  background-color:$color-lightblue;
+  background-color:$color-tertiary;
   width:100%;
   padding-top:30px;
   padding-bottom:30px;
@@ -8,12 +8,12 @@ section.highlighted-news{
     padding:5px;
   }
   .btn-more{
-    background-image:url('../assets/svg/btn-arrowmask--green.svg');
+    background-image:url('../assets/svg/btn-arrowmask--primary.svg');
   }
 }
 
 .news-block{
-  border:1px dashed $color-lightblue;
+  border:1px dashed $color-tertiary;
   border-radius:2px;
   height:310px;
   display:block;
